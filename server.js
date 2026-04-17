@@ -7,8 +7,13 @@ import ordersRoutes from "./routes/orderRoutes.js"
 
 
 const app = express();
+app.use(cors({
+    methods:["POST","GET"],
+    origin:["http://localhost:5173/","sahil-frontend-vite-2026-wwxetrf-un.vercel.app"]
+}))
 app.use(express.json())
-app.use(cors())
+
+
 
 connectdb()
 

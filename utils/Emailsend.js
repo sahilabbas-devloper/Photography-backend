@@ -16,7 +16,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async (orders) => {
     await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: `${EMAIL}`,
+        to: 'sa9300432@gmail.com',
         subject: "New order Received",
         html: `<h2> New order<h2/>
          <p><b>Name:<b/>${orders.name}<p/>
