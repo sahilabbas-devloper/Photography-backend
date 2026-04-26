@@ -9,7 +9,7 @@ import ordersRoutes from "./routes/orderRoutes.js"
 const app = express();
 app.use(cors({
     methods:["POST","GET"],
-    origin:["http://localhost:5173/","https://photography-web-un.vercel.app"]
+    origin:["http://localhost:5173","https://photography-web-un.vercel.app"]
 }))
 app.use(express.json())
 
@@ -21,6 +21,7 @@ connectdb()
 
 app.use("/api/orders", ordersRoutes);
 app.use("/api/details",ordersRoutes)
+app.use("/api/orders",ordersRoutes)
 
 
 const PORT = process.env.PORT || 5000
