@@ -13,9 +13,9 @@ import { Resend } from "resend"
 
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-export const sendEmail = async (orders) => {
+export const sendEmail = async (Orders) => {
 
-         const confirmlink = `${process.env.BACKEND_URL}/api/oders/${orders._id}/confirm`;
+         const confirmlink = `${process.env.BACKEND_URL}/api/oders/${Orders._id}/confirm`;
 
 
 
@@ -24,11 +24,11 @@ export const sendEmail = async (orders) => {
         to: 'sa9300432@gmail.com',
         subject: "New order Received",
         html: `<h2> New order<h2/>
-         <p><b>Name:<b/>${orders.name}<p/>
-        <p><b>email:<b/>${orders.email}<p/>
-         <p><b>date:<b/>${orders.date}<p/>
-         <p><b>packages:<b/>${orders.packages}<p/>
-         <p><b>massages:<b/>${orders.massage}<p/> 
+         <p><b>Name:<b/>${Orders.name}<p/>
+        <p><b>email:<b/>${Orders.email}<p/>
+         <p><b>date:<b/>${Orders.date}<p/>
+         <p><b>packages:<b/>${Orders.packages}<p/>
+         <p><b>massages:<b/>${Orders.massage}<p/> 
          <br/>
          
          <a herf="${confirmlink}"

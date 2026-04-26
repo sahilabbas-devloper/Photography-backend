@@ -6,8 +6,8 @@ export const Getorders = async (req,res) =>{
 const {name,email,date,packages,massage} = req.body;
 try {
 const Orders = await orders.create({name,email,date,packages,massage})
-
-       await sendEmail(orders)
+         console.log(Orders) 
+       await sendEmail(Orders)
    } catch (error) {
     console.log("email faild but order save")
    } 
