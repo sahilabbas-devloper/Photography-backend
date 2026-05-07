@@ -7,6 +7,6 @@ import {Confirmorder} from "../controllers/confirmorder.js"
 const router = express.Router();
 
 router.post("/send" , Getorders)
-router.get("/recive", Ordersend)
+router.post("/recive", Ordersend)
 router.get("/:orderId/confirm", Confirmorder)
 export default router;

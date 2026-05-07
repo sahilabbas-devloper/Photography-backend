@@ -5,7 +5,7 @@ export const Getorders = async (req,res) =>{
 
 const {name,email,date,packages,massage} = req.body;
 try {
-const Orders = await orders.create({name,email,date,packages,massage})
+const Orders = await orders.create({name,email,date,packages,massages:massage})
          console.log(Orders) 
        await sendEmail(Orders)
    } catch (error) {
