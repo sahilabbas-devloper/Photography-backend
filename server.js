@@ -20,8 +20,7 @@ connectdb()
 
 
 app.use("/api/orders", ordersRoutes);
-app.use("/api/details",ordersRoutes)
-app.use("/api/orders",ordersRoutes)
+
 
 
 const PORT = process.env.PORT || 5000
